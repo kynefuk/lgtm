@@ -1,0 +1,35 @@
+version: 2
+jobs:
+  setup_dependencies:
+    docker:
+      - image: circleci/python:3.8.1
+    steps:
+      - checkout
+      - restore_cache:
+        key: deps-{{ checksum "requirements.txt" }}
+      - run:
+        command: |
+          pip install --user -r requirements.txt
+      - save_cache:
+          key: deps-{{ checksum "requirements.txt" }}
+          paths:
+            - "~/.local"
+  test:
+    docker:
+      - image: circleci/python:3.8.1
+    steps:
+      - checkout
+      - restore_cache:
+          key: deps-{{ checksum "requirements.txt" }}
+      - run:
+          command: |
+            python -m unittest -v
+
+workflows:
+  version: 2
+  all: # allはGitHubへのpushがトリガとなり実行される
+    jobs:
+      - setup_dependencies
+      - test:
+          requires:
+            - setup_dependencies
