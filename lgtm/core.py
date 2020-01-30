@@ -1,4 +1,6 @@
 import click
+from lgtm.drawer import save_with_message
+from lgtm.image_source import get_image
 
 
 # Clickでは@click.commandを付けた関数を呼び出すと実行される
@@ -8,9 +10,9 @@ import click
 def cli(keyword, message):
     """LGTM画像生成ツール"""
     lgtm(keyword, message)
-    click.echo('lgtm')
 
 
 def lgtm(keyword, message):
-    # ここにロジックを書く
-    pass
+    # ファイルオブジェクトはコンテキストマネージャ
+    with get_image(keyword) as fp:
+        save_with_message(fp, message)
