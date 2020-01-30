@@ -3,11 +3,14 @@ import click
 
 # Clickでは@click.commandを付けた関数を呼び出すと実行される
 @click.command()
-def cli():
-    lgtm()
+@click.option('--message', '-m', default='LGTM', show_default=True, help='画像に乗せる文字列')
+@click.argument('keyword')
+def cli(keyword, message):
+    """LGTM画像生成ツール"""
+    lgtm(keyword, message)
     click.echo('lgtm')
 
 
-def lgtm():
+def lgtm(keyword, message):
     # ここにロジックを書く
     pass
