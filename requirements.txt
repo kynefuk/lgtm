@@ -1,8 +1,14 @@
--i https://pypi.org/simple
+autopep8==1.5
 certifi==2019.11.28
 chardet==3.0.4
-click==7.0
+Click==7.0
+entrypoints==0.3
+flake8==3.7.9
 idna==2.8
-pillow==7.0.0
+-e git+https://github.com/kynefuk/lgtm.git@7fde736b92e8c3051af0c135ffa580127187fc72#egg=lgtm
+mccabe==0.6.1
+Pillow==7.0.0
+pycodestyle==2.5.0
+pyflakes==2.1.1
 requests==2.22.0
 urllib3==1.25.8

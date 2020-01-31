@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "746c29fcf96b321543faa086bfce9a14c03a983895b52200728955abf495a74a"
+            "sha256": "1025349898d06954a86e29f97799e7d93b08d56ff5764f757ea5e57da7454bee"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -69,6 +69,10 @@
             ],
             "index": "pypi",
             "version": "==2.8"
+        },
+        "lgtm": {
+            "editable": true,
+            "path": "."
         },
         "mccabe": {
             "hashes": [

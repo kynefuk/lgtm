@@ -1,0 +1,11 @@
+setup.py
+lgtm/__init__.py
+lgtm/core.py
+lgtm/drawer.py
+lgtm/image_source.py
+lgtm.egg-info/PKG-INFO
+lgtm.egg-info/SOURCES.txt
+lgtm.egg-info/dependency_links.txt
+lgtm.egg-info/entry_points.txt
+lgtm.egg-info/requires.txt
+lgtm.egg-info/top_level.txt

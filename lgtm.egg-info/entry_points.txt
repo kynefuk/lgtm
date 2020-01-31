@@ -1,0 +1,3 @@
+[console_scripts]
+lgtm = lgtm.core:cli
+

@@ -15,6 +15,7 @@ urllib3 = "==1.25.8"
 Pillow = "==7.0.0"
 flake8 = "*"
 autopep8 = "*"
+lgtm = {editable = true,path = "."}
 
 [requires]
 python_version = "3.8"
