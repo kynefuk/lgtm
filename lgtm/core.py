@@ -24,5 +24,4 @@ def cli(**kwargs):
 def lgtm(keyword, message):
     # ファイルオブジェクトはコンテキストマネージャ
     with get_image(keyword) as fp:
-
         save_with_message(fp, message)
